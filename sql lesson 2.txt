@@ -1,0 +1,153 @@
+﻿AI COURSE SQL
+
+
+1
+CREATE TABLE shopping (
+    ID INT PRIMARY KEY,
+    Name TEXT(50),
+    amount INT
+);
+-----CREATE new table-----
+
+
+
+
+
+
+DROP TABLE shopping
+----remove current table---
+
+
+
+
+2
+ALTER TABLE shopping RENAME TO shopp;
+ALTER TABLE shopp RENAME TO shopping;
+-----rename table --
+
+
+
+
+
+
+3
+INSERT INTO shopping VALUES (1, 'Avokado', 5);
+INSERT INTO shopping VALUES (2, 'Milk', 2);
+INSERT INTO shopping VALUES (3, 'Bread', 3);
+INSERT INTO shopping VALUES (4, 'Chocolate', 8);
+INSERT INTO shopping VALUES (5, 'Bamba', 5);
+INSERT INTO shopping VALUES (6, 'Orange', 10);
+
+
+---insert new values to table shopping---
+
+
+
+
+4
+SELECT * FROM shopping
+---display all the info from all the columns  of the table shopping---
+
+
+
+
+
+
+5
+SELECT id, name FROM shopping
+---display only the columns NAME and ID from the table shopping---
+
+
+
+
+6
+SELECT * FROM shopping WHERE amount > 5;
+---present all the raws which the value in column AMOUNT is bigger then 5---
+
+
+SELECT * FROM shopping WHERE amount = 2;
+---present all the raws which the value in column AMOUNT is equal to 2---
+
+
+
+
+SELECT * FROM shopping WHERE name LIKE 'Bamba';
+---present all the raws which the value in column name is exactly BAMBA—
+
+
+
+
+
+
+7
+DELETE from shopping WHERE name like 'Orange';
+will delete the selected row, ‘Orange’
+
+
+
+
+8
+UPDATE
+UPDATE shopping SET name = 'Bisli' WHERE name LIKE 'Bamba'
+UPDATE shopping SET amount=1 WHERE name LIKE 'Milk'
+is used to modify the existing records in a table.
+
+
+
+
+9
+ALTER 
+will add column ‘maavar’ with null value to all raws
+
+
+10
+preform update in the table shopping
+update the value of the column maavar
+where id - make sure that the update is performed only on the raws  that column id  is fit to condition
+
+
+11.
+a.return all the raws that amount is bigger then 1
+maavar is bigger then 5
+
+
+b.maavar is in range 3-5 including
+
+
+
+
+12
+a.sort all the the raws on table shopping according the values on the column maavar on ascending scale
+b. sort all the the raws on descending scale according to maavar
+
+
+
+
+13.
+a.create new table named books with the column id and names
+b.added new info to the table
+c.deleted the table
+
+
+14.
+a.count - return the number of the raws
+b. return max value on column amount
+c.return avg value on column amount
+d.return min value on column amount
+
+
+15.
+a.invalid command because id primary key unique and therefore cannot be repeated (6 and 6)
+
+
+b.insert new records with values for the columns id, name, amount and maavar
+
+
+c.Group the rows by the values in the column maavar
+
+
+d.Returns the values in the maavar column and the number of records for each value.
+
+
+16.
+gives new nickname to ‘id’ column the name ‘secret’ while the rest of the columns stay with their original names
